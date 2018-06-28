@@ -1,8 +1,9 @@
 //Dependencies
-// var Book = require("..models/book.js");
+var Book = require("..models/book.js");
 
 //Routes
 module.exports = function (app) {
+    
     //Get all books
     app.get("/api/all", function (req, res) {
         Book.findAll({}).then(function (results) {
