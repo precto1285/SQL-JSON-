@@ -1,5 +1,5 @@
 //Dependencies
-var Book = require("..models/book.js");
+var Book = require("../models/book.js");
 
 //Routes
 module.exports = function (app) {
