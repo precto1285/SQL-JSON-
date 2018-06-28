@@ -5,7 +5,7 @@ var Book = require("../models/book.js");
 module.exports = function (app) {
     
     //Get all books
-    app.get("/api/all", function (req, res) {
+    app.get("/api/:all", function (req, res) {
         Book.findAll({}).then(function (results) {
             res.json(results);
         });
@@ -34,7 +34,7 @@ module.exports = function (app) {
     });
 
     //Get all books of a specific author
-    app.get("/api/author/:auther", function (req, res) {
+    app.get("/api/author/:author", function (req, res) {
         Book.findAll({
             where: {
                 author: req.params.author
